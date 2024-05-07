@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("https://media.istockphoto.com/id/1266188242/photo/futuristic-dirty-floor-with-neon-fluorescence-lamps.webp?b=1&s=170667a&w=0&k=20&c=JwX96ata9Gw5JtAws84GOGBYFULPgQRq6EMcF1mYab4=");
+    background-repeat: no-repeat;
+    background-size: 1300px 720px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    text-align: center;
+  }
+
+.content {
+	position: relative;
+  margin-top: 50px;
+}
+
+.content h2 {
+	color: #fff;
+	font-size: 2.5em;
+  font-weight: 900;
+  letter-spacing: 12px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px aqua;
+}
+
+.content h2:nth-child(2) {
+	color: aqua;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+  
+  header {
+    color: aqua;
+    letter-spacing: 10px;
+    font-size: 22px;
+    padding: 10px 5px;
+    font-family: "Poppins", sans-serif;
+    filter: drop-shadow(5px 5px 5px hsl(1000, 100%, 200%))
+    }
+  
+  @media only screen and (min-width: 768px) {
+    header {
+      font-size: 28px;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    header {
+      font-size: 32px;
+      padding: 10px;
+    }
+    
+    header h1 {
+      font-weight: 400;
+    }
+  }
+  
+  .main {
+    background: aqua;
+    width: 250px;
+    padding-bottom: 10px;
+    margin: auto;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+            border-radius: 2.5%;
+
+            
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .main {
+      width: 310px;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .main {
+      width: 410px;
+    }
+  }
+  
+  .box {
+    background: black;
+    opacity: 100%;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 10px 0 0 10px;
+    border-radius: 10%;
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .box {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  
+  .box.play:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  
+  .box img {
+    width: 100%;
+    display: block;
+    border: solid 1px transparent;
+  }
+  
+  .box .outlined {
+    border: solid 1px #34495e;
+    background: #1abc9c;
+    opacity: 0.7;
+  }
+  
+  #state {
+    background: hsl(240, 100%, 0%);
+    background-size: 250%;
+    width: 230px;
+    line-height: 25px;
+    float: left;
+    margin: 10px 0 0 10px;
+    padding: 0 10px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    #state {
+      width: 290px;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    #state {
+      width: 390px;
+      line-height: 35px;
+    }
+  }
+  
+  #time {
+    float: left;
+  }
+  
+  #time::after {
+    content: " sec";
+  }
+  
+  #score {
+    float: right;
+  }
+  
+  #score::after {
+    content: " points";
+  }
+  
+  footer p {
+    color: aqua;
+    padding: 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  footer p a {
+    color: aqua;
+    text-decoration: none;
+    filter: drop-shadow(5px 5px 5px hsl(1000, 100%, 200%))
+  }
+  
+  footer p a:hover {
+    color: aqua;
+    text-decoration: underline;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  #pre {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  #themes {
+    margin: auto;
+    padding: 20px;
+    width: 300px;
+    background: white;
+    color: #6186aa;
+  }
+  
+  #themes p {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: solid 1px;
+    background: white;
+    color: #6186aa;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #themes p:hover {
+    background: #6186aa;
+    background-size: 250%;
+    color: white;
+  }
+  
+  #pre h2, #post h2 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  
+  #post {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+  
+  #post > div {
+    width: 300px;
+    padding: 20px 0 40px;
+    background: white;
+    color: #6186aa;
+  }
+  
+  #post p:first-child, 
+  #post #final {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: auto;
+    padding: 10px 20px;
+  }
+  
+  #post #again {
+    color: #6186aa;
+    text-decoration: none;
+    margin: auto;
+    padding: 10px 20px;
+    width: 160px;
+    border: solid 1px;
+  }
+  
+  #post #again:hover {
+    background: #6186aa;
+    background-size: 250%;
+    color: white;
+    cursor: pointer;
+  }
+  a:link{color: aqua;}
+  a:visited{color: aqua;}
+  a:hover{color: aqua;}
+  a:active{color: yellow;}
+  .h1{
+    position: relative;
+  animation-name: example;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+}
+
+@keyframes example {
+  0%   { left:0px; top:0px;}
+  25%  { left:200px; top:0px;}
+  50%  { left:20px; top:20px;}
+  75%  { left:0px; top:20px;}
+  100% { left:0px; top:0px;}
+  }
+
+.confetti i {
+  height: 3rem;
+  width: 3rem;
+  margin: 0 0.2rem;
+  animation-name: confetti;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: calc(60s / var(--speed));
+}
+
+.confetti .rectangle {
+  width: 1rem;
+  height: 0.5rem;
+  background-color: var(--bg);
+}
+  
+.confetti i:nth-child(even) {
+  transform: rotate(90deg);
+ }
+  
+@keyframes confetti {
+  0% {
+    transform: translateY(-100vh);
+  }
+  
+  100% {
+    transform: translateY(100vh);
+  }
+}
